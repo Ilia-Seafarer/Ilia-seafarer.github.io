@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   font-family: "open sans", helvetica, arial, sans;
   background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 * {
@@ -113,27 +118,36 @@ body {
   transition: 0.5s;
 }
 .container .main header {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .container .main header.header__one {
-  background: url("../img/homePage1.jpg") no-repeat top center/cover;
+  background-image: url("../img/homePage1.jpg");
+  background-position: center;
+  -webkit-animation: change 30s infinite ease-in-out;
+          animation: change 30s infinite ease-in-out;
 }
 .container .main header.header__two {
-  background: url("../img/homePage2.jpg") no-repeat top center/cover;
+  background-image: url("../img/homePage2.jpg");
+  background-position: center;
 }
 .container .main header.header__three {
-  background: url("../img/homePage3.jpg") no-repeat top center/cover;
+  background-image: url("../img/homePage3.jpg");
+  background-position: center;
 }
 .container .main header.header__four {
-  background: url("../img/homePage4.jpg") no-repeat top center/cover;
+  background-image: url("../img/homePage4.jpg");
+  background-position: center;
 }
 .container .main header.header__five {
-  background: url("../img/homePage5.jpg") no-repeat top center/cover;
+  background-image: url("../img/homePage5.jpg");
+  background-position: center;
 }
 .container .main header.header__six {
-  background: url("../img/homePage6.jpg") no-repeat top center/cover;
+  background-image: url("../img/homePage6.jpg");
+  background-position: center;
 }
 .container .main header .header {
   position: absolute;
@@ -154,6 +168,9 @@ body {
 }
 .container .main header .header__item .title {
   font-size: 2.7rem;
+}
+.container .main header .header__item title p2 {
+  top: 20%;
 }
 .container .main header .header__item .btn {
   margin-top: 1rem;
@@ -221,10 +238,11 @@ body {
   background: #fff;
   position: absolute;
   margin-top: 350px;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 15%;
 }
 .container .log-form form {
   display: block;
@@ -236,15 +254,17 @@ body {
   color: #5d5d5d;
   font-family: "open sans condensed";
   font-size: 1.35em;
+  font-weight: bold;
   display: block;
-  background: #2a2a2a;
+  background: transparent;
   width: 100%;
   text-transform: uppercase;
   padding: 0.75em 1em 0.75em 1.5em;
   box-shadow: inset 0px 1px 1px fadeout(white, 95%);
-  border: 1px solid #1d1d1d;
   margin: 0;
   font-weight: 200;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
 }
 .container .log-form input {
   display: block;
@@ -430,5 +450,45 @@ body {
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+@-webkit-keyframes change {
+  0% {
+    background-image: url(../img/homePage1.jpg);
+  }
+  20% {
+    background-image: url(../img/homePage2.jpg);
+  }
+  40% {
+    background-image: url(../img/homePage3.jpg);
+  }
+  60% {
+    background-image: url(../img/homePage4.jpg);
+  }
+  80% {
+    background-image: url(../img/homePage5.jpg);
+  }
+  100% {
+    background-image: url(../img/homePage6.jpg);
+  }
+}
+@keyframes change {
+  0% {
+    background-image: url(../img/homePage1.jpg);
+  }
+  20% {
+    background-image: url(../img/homePage2.jpg);
+  }
+  40% {
+    background-image: url(../img/homePage3.jpg);
+  }
+  60% {
+    background-image: url(../img/homePage4.jpg);
+  }
+  80% {
+    background-image: url(../img/homePage5.jpg);
+  }
+  100% {
+    background-image: url(../img/homePage6.jpg);
   }
 }/*# sourceMappingURL=main.css.map */
